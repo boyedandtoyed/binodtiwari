@@ -38,6 +38,13 @@
             width: 800px;
             font-family: cursive;
             font-size: 48px;
+            animation: fadeText 6s linear once;
+        }
+        @keyframes fadeText{
+            0%{opacity:1;}
+            49%{opacity:0;}
+            51%{opacity:1;}
+            100%{opacity:0;}
         }
         
         div#one {
@@ -116,10 +123,10 @@
     </style>
 </head>
 
-<body onload="setTimeout(loaderCancel, 3000);">
+<body onload="setTimeout(loaderCancel, 6000);">
     <div id="loader">
         <h1>This is strictly for TCU. It took more than 3 days to think what to do. It took about 1 day to make this.
-            So, 4 days for doing nothing. by thw way please ctrl+ for zooming. Thanks.</h1>
+            So, 4 days for doing nothing.</h1>
     </div>
     <canvas id="particlesField">This Browser is not supported</canvas>
     <div id="one"></div>
@@ -174,7 +181,11 @@ divone.backgroundSize = height + "px " + width + "px";
             loader.parentNode.removeChild(loader);
 
         }
-
+setTimeout(changeDoc, 3000);
+        function changeDoc(){
+            h1 = document.querySelector("h1");
+            h1.innerHtml = "Sorry! But please ctrl + + for zooming;"
+        }
         
     </script> 
     <script>(function e(t, n, r) {
