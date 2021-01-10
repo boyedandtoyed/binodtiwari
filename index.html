@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
         body {
             position: absolute;
@@ -80,6 +81,12 @@
             top: 50%;
             left: 33%;
         }
+        canvas{
+            z-index: 1001;
+        opacity:0.4;
+             background-color: #04122f;
+        }
+        
         
         button {
             z-index: 1000;
@@ -124,8 +131,9 @@
 
 <body onload="setTimeout(loaderCancel, 3000);">
     <div id="loader">
-        <h1>This is strictly for TCU. It took more than 3 days to think what to do. It took about 1day to make this. So 4 days for doing nothing.</h1>
+        <h1>This is strictly for TCU. It took more than 3 days to think what to do. It took about 1 day to make this. So 4 days for doing nothing.</h1>
     </div>
+    <canvas id="particlesField">This Browser is not supported</canvas>
     <div id="one"></div>
     <div id="two"></div>
     <button class="button1">
@@ -208,7 +216,8 @@
             var button3 = document.querySelector(".button3");
             button3.style.display = "block";
         }
-    </script>
+    </script> 
+    <script src="https://github.com/nikitindiz/particles-animation/commit/d97a52ba68ec9f8106b53c422c23cd856495f2f7#diff-f168a78f0ef4dac15c2e638d98a4cfb4970cf18205cb7cd10f2cd3a58323c828https://github.com/nikitindiz/particles-animation/commit/d97a52ba68ec9f8106b53c422c23cd856495f2f7#diff-f168a78f0ef4dac15c2e638d98a4cfb4970cf18205cb7cd10f2cd3a58323c828https://github.com/nikitindiz/particles-animation/commit/d97a52ba68ec9f8106b53c422c23cd856495f2f7#diff-f168a78f0ef4dac15c2e638d98a4cfb4970cf18205cb7cd10f2cd3a58323c828v></script> 
 </body>
 
 </html>
