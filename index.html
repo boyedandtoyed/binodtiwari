@@ -41,7 +41,7 @@
         
         div#one {
             position: absolute;
-            background-image: url("../Binod Svg/g3180.png");
+            background-image: url("https://images.pexels.com/photos/5499131/pexels-photo-5499131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
             background-position: center;
             width: 100vw;
             background-repeat: no-repeat;
@@ -65,7 +65,7 @@
         span {
             position: absolute;
             width: 100px;
-            background-image: url("../Binod Svg/g3180.png");
+            background-image: url("https://images.pexels.com/photos/5499131/pexels-photo-5499131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
             height: 100px;
             background-position: center;
             background-size: 100%;
@@ -83,7 +83,7 @@
         }
         canvas{
             z-index: 1000;
-        opacity:0.4;
+            opacity:0.1;
             width:100vw;
             height:100vh;
             position:absolute;
@@ -193,7 +193,7 @@
         }
 
         function beReadyToZoom() {
-            allSpans = document.querySelectorAll(span);
+            allSpans = document.querySelectorAll("span");
             allSpans.forEach((span) => {
                 console.log(span);
                 span.classList.add("zoom");
@@ -204,12 +204,9 @@
             var button3 = document.querySelector(".button3");
             button3.style.display = "none";
             button4.style.display = "block";
-
         }
-
-
         function dontBeReadyToZoom() {
-            allSpans = document.querySelectorAll(span);
+            allSpans = document.querySelectorAll("span");
             allSpans.forEach((span) => {
                 span.classList.remove("zoom");
             });
