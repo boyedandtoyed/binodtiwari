@@ -15,7 +15,8 @@
             bottom: 0;
             width: 100vw;
             height: 100vh;
-            overflow: hidden;background-color:black;
+            overflow: hidden;
+            background-color:black;
         }
         
         div#loader {
@@ -46,7 +47,6 @@
             width: 100vw;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: 100%;
             overflow: hidden;
             height: 100vh;
             z-index: 997;
@@ -68,7 +68,6 @@
             background-image: url("https://images.pexels.com/photos/5499131/pexels-photo-5499131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
             height: 100px;
             background-position: center;
-            background-size: 100%;
             pointer-events: none;
             border-radius: 50%;
             background-attachment: fixed;
@@ -79,7 +78,7 @@
         .button1,
         .button2 {
             top: 50%;
-            left: 33%;
+            left: 50%;
         }
         canvas{
             z-index: 1000;
@@ -95,7 +94,7 @@
         button {
             z-index: 1001;
             height: 50px;
-            padding: 3px;
+            padding: 5px;
             position: absolute;
             border-radius: 10px;
             background-color: rgb(187, 22, 187);
@@ -108,34 +107,19 @@
             box-shadow: 2px 3px 13px rgba(58, 57, 57, 0.808);
             transition: outline-offset 0.1s linear, opacity 0.2s linear;
         }
-        
-        .button3,
-        .button4 {
-            top: 50%;
-            right: 33%;
-            padding: 3px;
-        }
-        
         button:hover,
         button:focus {
             outline-offset: 6px;
             opacity: 1;
         }
-        
-        .zoom {
-            transition: transform 0.1s linear;
-        }
-        
-        .zoom:hover,
-        .zoom:focus {
-            transform: scale(2);
-        }
+      
     </style>
 </head>
 
 <body onload="setTimeout(loaderCancel, 3000);">
     <div id="loader">
-        <h1>This is strictly for TCU. It took more than 3 days to think what to do. It took about 1 day to make this. So 4 days for doing nothing.</h1>
+        <h1>This is strictly for TCU. It took more than 3 days to think what to do. It took about 1 day to make this.
+            So, 4 days for doing nothing. by thw way please ctrl+ for zooming. Thanks.</h1>
     </div>
     <canvas id="particlesField">This Browser is not supported</canvas>
     <div id="one"></div>
@@ -146,26 +130,25 @@
     <button class="button2">
     Unclean the window
     </button>
-    <button class="button3" onclick="beReadyToZoom();">
-    Zoom 
-</button>
-    <button class="button4" onclick="dontBeReadyToZoom();">
-    Unzoom
-</button>
+    
+    
 
     <script>
         var body = document.querySelector('body');
+        var divone= document.querySelector("#one");
         var button1 = document.querySelector('.button1');
         var button2 = document.querySelector(".button2");
-        button2.style.display = "none";
+        var height = window.innerHeight;
+        var width = window.innnerWidth;
+        
         button4 = document.querySelector(".button4");
         button4.style.display = "none";
-        var allSpans;
-
+divone.backgroundSize = height + "px " + width + "px";
         function cleanWindow(e) {
             let span = document.createElement("span");
             span.style.top = e.offsetY + "px";
             span.style.left = e.offsetX + "px";
+            span.backgroundSize = height + "px " + width + "px";
             body.appendChild(span);
         }
 
@@ -192,31 +175,7 @@
 
         }
 
-        function beReadyToZoom() {
-            allSpans = document.querySelectorAll("span");
-            allSpans.forEach((span) => {
-                console.log(span);
-                span.classList.add("zoom");
-            });
-            button1.style.display = "block";
-            button2.style.display = "none";
-            body.removeEventListener("mousemove", cleanWindow);
-            var button3 = document.querySelector(".button3");
-            button3.style.display = "none";
-            button4.style.display = "block";
-        }
-        function dontBeReadyToZoom() {
-            allSpans = document.querySelectorAll("span");
-            allSpans.forEach((span) => {
-                span.classList.remove("zoom");
-            });
-            button1.style.display = "block";
-            body.removeEventListener("mousemove", cleanWindow);
-            button2.style.display = "none";
-            button4.style.display = "none";
-            var button3 = document.querySelector(".button3");
-            button3.style.display = "block";
-        }
+        
     </script> 
     <script>(function e(t, n, r) {
   function s(o, u) {
