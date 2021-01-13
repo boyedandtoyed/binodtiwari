@@ -15,8 +15,8 @@
             margin: 0;
             left: 0;
             bottom: 0;
-            width: 100vw;
-            height: 100vh;
+            min-width: 100vw;
+            min-height: 100vh;
             background-color:black;
         }
         
@@ -28,6 +28,7 @@
             justify-content: center;
             align-items: center;
             background-color: black;
+            position:absolute;
         }
         
         div>h1 {
@@ -43,8 +44,8 @@
         }
         @keyframes fadeText{
             0%{opacity:1;}
-            49%{opacity:0;}
-            51%{opacity:1;}
+            50%{opacity:0;}
+            50%{opacity:1;}
             100%{opacity:0;}
         }
         
