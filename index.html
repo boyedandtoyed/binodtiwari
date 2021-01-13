@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<-- file size is only half MBs so I haven't optimised it-->
-<-- by thw way this site's going to exist only for 6 weeks to prevent my privacy-->                                          
+<!-- file size is only half MBs so I haven't optimised it-->
+<!----- by thw way this site's going to exist only for 6 weeks to prevent my privacy-->                                          
 <html lang="en">
 
 <head>
@@ -19,6 +19,7 @@
             min-height: 100vh;
             background-color:white;
             overflow:hidden;
+           
         }
         
         div#loader {
@@ -182,6 +183,7 @@ divone.backgroundSize = height + "px " + width + "px";
         function loaderCancel() {
             loader = document.getElementById("loader");
             loader.parentNode.removeChild(loader);
+            document.querySelector("body").style.transform = "scale(0.8)";
 
         }
 setTimeout(changeDoc, 3000);
