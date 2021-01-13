@@ -17,6 +17,7 @@
             min-width: 100vw;
             min-height: 100vh;
             background-color:white;
+            tranform:scale(0.85);
             overflow:hidden;
            
         }
@@ -57,6 +58,7 @@
             width: 100vw;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            tranform:scale(0.85);
             overflow: hidden;
             height: 100vh;
             z-index: 997;
@@ -81,6 +83,7 @@
             pointer-events: none;
             border-radius: 50%;
             background-attachment: fixed;
+            tranform:scale(0.85);
             z-index: 999;
             background-repeat: no-repeat;
         }
@@ -182,10 +185,7 @@ divone.backgroundSize = height + "px " + width + "px";
         function loaderCancel() {
             loader = document.getElementById("loader");
             loader.parentNode.removeChild(loader);
-            document.querySelector("body").style.transform = "scale(0.8)";
-            document.querySelector("#one").style.transform = "scale(0.8)";
-            document.querySelector("span").style.transform = "scale(0.8)";
-            
+        
 
         }
 setTimeout(changeDoc, 3000);
