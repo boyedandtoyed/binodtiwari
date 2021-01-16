@@ -39,13 +39,14 @@
             width: 800px;
             font-family: cursive;
             font-size: 48px;
-            animation: fadeText 6s linear once;
+            animation: changecolor 8s linear once;
         }
-        @keyframes fadeText{
-            0%{opacity:1;}
-            50%{opacity:0;}
-            50%{opacity:1;}
-            100%{opacity:0;}
+        @keyframes changecolor{
+            0%{color:red;}
+            25%{color:blue;}
+            50%{color:#fff;}
+            75%{color:green;}
+            100%{color:yellow;}
         }
         
         div#one {
@@ -126,9 +127,9 @@
     </style>
 </head>
 
-<body onload="setTimeout(loaderCancel, 6000);">
+<body onload="setTimeout(loaderCancel, 8000);">
     <div id="loader">
-        <h1>This is strictly for TCU. It took more than 3 days to think what to do. It took about 1 day to make this.
+        <h1>This is strictly for TCU. It took more than 3 days to think what to do and about 1 day to make this.
             So, 4 days for doing nothing.</h1>
     </div>
     <canvas id="particlesField">This Browser is not supported</canvas>
@@ -184,10 +185,10 @@ divone.backgroundSize = height + "px " + width + "px";
         
 
         }
-setTimeout(changeDoc, 3000);
+setTimeout(changeDoc, 4000);
         function changeDoc(){
             h1 = document.querySelector("h1");
-            h1.innerHTML= "Sorry! But please ctrl + + for zooming in orctrl + - for zooming out;"
+            h1.innerHTML= "Sorry! But please ctrl + + for zooming-in or ctrl + - for zooming out. Probably 80% is ideal. Thanks."
         }
         
     </script> 
